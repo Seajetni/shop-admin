@@ -2,21 +2,23 @@ import { Layout } from "@/components/Layout";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-export default function products() {
+
+
+export default function Products() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const data = async () => {
+    const fetchData = async () => { // Renamed inner function to avoid conflict with outer variable name
       try {
         const res = await fetch("/api/product");
         const data = await res.json();
         setData(data.data);
       } catch (error) {
-        console.error("Error fetching  data:", error);
+        console.error("Error fetching data:", error);
       }
     };
-    const intervalId = setInterval(data, 1000);
+    const intervalId = setInterval(fetchData, 1000);
 
     return () => clearInterval(intervalId);
   }, []);
