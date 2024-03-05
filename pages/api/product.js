@@ -25,8 +25,8 @@ export default async function handler(req, res) {
       break;
     case 'POST':
       try {
-        const { name, details, price, img , featured ,img2 , img3 } = req.body;
-        const product = await Product.create({ name, details, price, img , featured , img2  , img3 });
+        const { name, details, price, img , featured  } = req.body;
+        const product = await Product.create({ name, details, price, img , featured  });
         res.status(200).json({ success: true, data: product });
       } catch (error) {
         res.status(400).json({ success: false });

@@ -1,13 +1,14 @@
 import React from "react";
-import { Nav } from "./Nav";
+import Nav from "./Nav";
+
 
 export const Layout = (props) => {
   return (
-    <div className='w-full bg-black h-screen'>
-      <div className=" bg-black text-white">
-        <Nav />
+    <div className='w-full  h-screen'>
+      <div className=" ">
+        <Nav/>
 
-        <aside>{props.children}</aside>
+        <aside className=' relative'>{props.children}</aside>
       </div>
     </div>
   );

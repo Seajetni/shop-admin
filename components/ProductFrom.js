@@ -40,7 +40,7 @@ export default function ProductFrom({
       console.error('Error:', error);
       // Handle the error appropriately, e.g., show a message to the user
   }
-    router.push("/products");
+    router.push("/");
   };
 
   const ImgeUpload = (e) => {
