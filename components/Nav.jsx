@@ -76,7 +76,7 @@ export default function Nav() {
           />
         </svg>
 
-        <Link href="/new" className="flex items-center">
+        <Link href="/products/new" className="flex items-center">
           เพิ่มสินค้า
         </Link>
       </Typography>
